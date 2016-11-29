@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:1px solid #000;
+        }
+    </style>
+    <script src="js/touch.js"></script>
+</head>
+<script>
+        window.onload=function(){
+            var box=document.querySelector(".box");
+            touch.on("body","drag",".box",function(e){
+                box.style.marginLeft=e.x+"px";
+            })
+        }
+
+</script>
+<body>
+<div class="box"></div>
+</body>
+</html>

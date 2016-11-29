@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<script>
+    window.onload=function(){
+        var box=document.querySelector(".box");
+        /*box.addEventListener("touchstart",function(){
+            console.log("start");
+        })
+        box.addEventListener("touchmove",function(){
+            console.log("move");
+        })
+        box.addEventListener("touchend",function(){
+            console.log("end");
+        })*/
+
+
+      /*  function $(selector){
+            function $(selector){
+
+            }
+            $.prototype={
+                test:function(){
+                    alert("text")
+                }
+            }
+            return  new $(selector);
+        }
+
+        $().test();*/
+    };
+    (function(){
+        window.$=function(selector){
+            function $(selector){
+                if(typeof selector=="function"){
+                    this.ready(selector)
+                }else if(selector.nodeType==1){
+                    this[0]=selector;
+                    this.length=1;
+                }else if(selector[0].nodeType==1){
+                    this.extend(this,selector);
+                }else if(typeof selector=="string"){
+                    var objs=document.querySelector(selector);
+                    this.extend(this,objs)
+                    this.length=objs.length;
+                }else if(typeof selector=="string"&&/^<\w{1,6}>$/.test(selector)){
+                    var result=/^<\w{1,6}>$/.exec(selector);
+                    var ele=result[1];
+                    this[0]=document.createElement(ele);
+                    this.length=1;
+                }
+            }
+            $.prototype={
+                test:function(){
+                    alert("text")
+                },
+                ready:function(selector){
+                    document.addEventListener("DOMContentLoad",function(){
+                        selector();
+                    });
+                },
+                extend:function(obj,obj1){
+                    for(var i in obj1){
+                        obj[i]=obj1[i];
+                    }
+                    return this;
+                },
+                each:function(callback){
+                    for(var i=0;i<this.length;i++){
+                        callback(i,this[i]);
+                    }
+                },
+                html:function(val){
+                    this.each(function(index,obj){
+                        obj.innerHTML=val;
+                    })
+                    return this;
+                },
+                css:function(cssParam){
+                    this.each(function(){
+                        for(var i in cssParam){
+                            if(i=="width"||i=="height"){
+                                var index=String(cssParam[i].indexOf("px"));
+                                if(index>-1){
+                                    var val=cssParam[i].slice(0,index);
+                                }else{
+                                    val=cssParam[i];
+                                }
+                                obj.style[i]=val+"px";
+                            }
+                            obj.style[i]=cssParam[i];
+                        }
+                    })
+                },
+                click:function(callback){
+                    this.each(function(index,obj){
+                        obj.onclick=function(){
+                            callback.call(obj);
+                        }
+                    })
+                },
+                tap:function(callback){
+                    var now,end;
+
+                    this.each(function(index,obj){
+                        obj.addEventListener("touchstart",function(){
+                            now=new Date().getTime();
+                        })
+                        obj.addEventListener("touchend",function(){
+                            end=new Date().getTime();
+                            if(end-now<200){
+                                callback.call(obj);
+                                clearTimeout(obj.t);
+                            }
+                        })
+                    })
+                    return this;
+                },
+                hold:function(callback){
+                    this.each(function(index,obj){
+                        obj.addEventListener("touchstart",function(){
+                            obj.t=setTimeOut(function(){
+                                callback.call(obj);
+                            },700)
+                        })
+                    })
+                    return this;
+                },
+                tapEnd:function(callback){
+                    this.each(function(index,obj){
+                        obj.addEventListener("touchend",function(){
+                            callback.call(obj);
+                        })
+                    })
+                }
+
+            }
+            return  new $(selector);
+        }
+    })();
+    /*window.jquery=window.$;
+    jquery().test();*/
+
+    $(function(){
+        $(".box").html(1).css({
+            "color":"red"
+        }).tap(function(){
+            $(this).css({
+                background:"yellow"
+            })
+        }).hold(function(){
+            $(this).css({
+                background:"blue"
+            })
+        })
+    })
+
+
+</script>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+</body>
+</html>
