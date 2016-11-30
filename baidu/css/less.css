@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 .container {
-  width: 800px;
+  width: 600px;
   margin: auto;
+  position: relative;
 }
 .container > .row {
   width: 100%;
@@ -19,6 +20,7 @@
 .container-fluid {
   width: 100%;
   margin: auto;
+  position: relative;
 }
 .container-fluid > .row {
   width: 100%;
@@ -241,7 +243,9 @@
     display: none;
   }
 }
-/*@media screen and (min-width:@num2){
+/*
+//大屏
+@media screen and (min-width:@num2){
   .container{
     width:@num2;
     margin:auto;
@@ -256,4 +260,5 @@
   .col-l-hide{
     display:none;
   }
-}*/
+}
+*/
