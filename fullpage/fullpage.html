@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.fullpage.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src = "js/jquery.js"></script>
+    <script src = "js/jquery.fullPage.js"></script>
+    <style>
+        .text{
+            text-align: center;
+            font-size:40px;
+            color:#fff;
+            transition:transform 2s ease;
+        }
+        .section:nth-child(1){
+            background:orange;
+
+        }
+        .section:nth-child(2){
+            background:blue;
+
+        }
+        .section:nth-child(3){
+            background:green;
+
+        }
+        .section:nth-child(4){
+            background:pink;
+        }
+        .section:nth-child(5){
+            background:coral;
+        }
+        .slide{
+            text-align:center;
+            line-height:100%;
+            font-size:45px;
+        }
+        .fp-auto-height{
+            height:100px;
+            background:greenyellow;
+        }
+        #myMenu{
+            width:100px;
+            height:500px;
+            position:fixed;
+            z-index:555;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="btn-group" id = "myMenu">
+    <button  data-menuanchor="firstPage" type="button" class="btn btn-default"><a href="#firstPage">First section</a></button>
+    <button data-menuanchor="secondPage" type="button" class="btn btn-default"><a href="#secondPage">Second section</a></button>
+    <button data-menuanchor="thirdPage" type="button" class="btn btn-default"><a href="#thirdPage">Third section</a></button>
+    <button data-menuanchor="fourthPage" type="button" class="btn btn-default"><a href="#fourthPage">Forth section</a></button>
+    <button data-menuanchor="fifthPage" type="button" class="btn btn-default"><a href="#fourthPage">five section</a></button>
+</div>
+<div id="fullpage">
+    <div class = "section">
+        <div class = "text">
+            one create fullpage scrolling website
+        </div>
+        <!--//luobotu-->
+
+    </div>
+    <div class = "section">
+        <div class="slide" data-anchor="slide1"> Slide 1 </div>
+        <div class="slide" data-anchor="slide2"> Slide 2 </div>
+        <div class="slide" data-anchor="slide3"> Slide 3 </div>
+        <div class="slide" data-anchor="slide4"> Slide 4 </div>
+    </div>
+    <div class = "section">
+        <div  class = "text">
+            three
+        </div>
+    </div>
+    <div class="section">
+        <div class = "text">
+            Whole viewport
+        </div>
+    </div>
+    <div class = "section active">
+        <div  class = "text">
+            four
+        </div>
+        <img data-src="image.png">
+        <video>
+            <source data-src="video.webm" type="video/webm" />
+            <source data-src="video.mp4" type="video/mp4" />
+        </video>
+    </div>
+    <div class="section fp-auto-height">
+        <div class = "text">
+            Auto height
+        </div>
+    </div>
+</div>
+<script>
+    window.onload = function(){
+        $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage','lastPage'],
+            menu: '#myMenu',
+            afterResize: function(){
+                var pluginContainer = $(this);
+                alert("The sections have finished resizing");
+            },
+            afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+                var loadedSlide = $(this);
+
+                //first slide of the second section
+                if(anchorLink == 'secondPage' && slideIndex == 1){
+                    alert("First slide loaded");
+                }
+
+                //second slide of the second section (supposing #secondSlide is the
+                //anchor for the second slide
+                if(index == 2 && slideIndex == 'secondSlide'){
+                    alert("Second slide loaded");
+                }
+            }
+        });
+
+    }
+</script>
+</body>
+</html>
