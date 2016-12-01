@@ -1,8 +1,7 @@
 $(function(){
     $(window).mousedown(function(e){
         e.preventDefault();
-    })
-    $(window).mousemove(function(e){
+    }).mousemove(function(e){
         e.preventDefault();
     })
     var clientH=$(window).height();
@@ -49,26 +48,26 @@ $(function(){
     $("#fullpage")[0].addEventListener("webkitTransitionEnd",function(){
         flag=true;
 
-            $(".aa").each(function(index,obj){
+            $("section").each(function(index,obj){
                 if(index==0){
                     return;
                 }
                 if(index==num){
-                    $(obj).find(".left-img img").css({
-                        marginLeft:0,
+                    $(obj).find(".left>.title").css({
+                        transform:"translateX(50px)",
                         opacity:1
                     })
-                    $(obj).find(".right-img img").css({
-                        marginRight:0,
+                    $(obj).find(".right>.obj").css({
+                        transform:"translateX(-50px)",
                         opacity:1
                     })
                 }else{
-                    $(obj).find(".left-img img").css({
-                        marginLeft:-50,
+                    $(obj).find(".left>.title").css({
+                        transform:"translateX(-50px)",
                         opacity:0
                     })
-                    $(obj).find(".right-img img").css({
-                        marginRight:-50,
+                    $(obj).find(".right>.obj").css({
+                        transform:"translateX(50px)",
                         opacity:0
                     })
                 }
@@ -76,6 +75,16 @@ $(function(){
     })
     $("#fullpage")[0].addEventListener("mozTransitionEnd",function(){
         flag=true;
+        $(".title").each(function(index,obj){
+            $(obj).eq(index).css({
+                transform: "translateX(0px)",opacity: 1
+            })
+        })
+        $(".obj").each(function(index,obj){
+            $(obj).eq(index).css({
+                transform: "translateX(0px)",opacity: 1
+            })
+        })
     })
 
     $("li span").eq(0).css("background","#30628A");
@@ -102,8 +111,7 @@ $(function(){
             $(".menu a").each(function(index,obj){
                 $(obj).css({
                     opacity:0,
-                    transform:"rotateX(90deg)",
-                    animation:"menu .3s ease forwards"+0.2*index+"s"
+                    animation: "menu 2s ease "+index*0.2+"s forwards"
                 })
             })
             flag2=false;
@@ -118,14 +126,13 @@ $(function(){
             $(".menu a").each(function(index,obj){
                 $(obj).css({
                     opacity:1,
-                    transform:"rotateX(0deg)",
-                    animation:"menu1 .3s ease forwards"+(1.2-0.2*index)+"s"
+                    animation: "menu1 2s ease "+(1.2-index*0.2)+"s forwards"
                 })
             })
             flag2=true;
         }
     })
-
+    //浏览器大小
     $(window).resize(function(){
         clientH=$(window).height();
         var clientW=$(window).width();
@@ -140,7 +147,6 @@ $(function(){
             $(".menu-option-tline,.menu-option-bline").css({
                 transform:"translate(0,0) rotate(0)"
             })
-
             flag2=true;
         }
     })
