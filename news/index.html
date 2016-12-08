@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper-3.4.0.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <title>新闻</title>
+</head>
+<body>
+<!--头部-->
+<header>
+    <div class="left"></div>
+    <div class="center">
+        <span></span><a href="javascript:;">凤凰新闻</a>
+    </div>
+    <div class="right"></div>
+</header>
+<!--导航-->
+<nav>
+    <a href="javascript:;">头条</a>
+    <a href="javascript:;">推荐</a>
+    <a href="javascript:;">娱乐</a>
+    <a href="javascript:;">北京</a>
+    <a href="javascript:;">财经</a>
+    <a href="javascript:;">凤凰</a>
+    <a href="javascript:;">+</a>
+</nav>
+<!--轮播-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/banner1.jpg" alt="">
+                <h6>韩国称发现朝鲜隧道:1小时可过3万人</h6>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/banner2.jpg" alt="">
+                <h6>韩国称发现朝鲜隧道:1小时可过3万人</h6>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/banner3.jpg" alt="">
+                <h6>韩国称发现朝鲜隧道:1小时可过3万人</h6>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+<!--主体-->
+<div class="main">
+    <div class="list">
+        <div class="img">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+        <div class="time">7分钟前</div>
+    </div>
+    <div class="list">
+        <div class="img">
+            <img src="img/2.jpg" alt="">
+        </div>
+        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+        <div class="time">7分钟前</div>
+    </div>
+    <div class="list">
+        <div class="img">
+            <img src="img/3.png" alt="">
+        </div>
+        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+        <div class="time">7分钟前</div>
+    </div>
+    <div class="list">
+        <div class="img">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+        <div class="time">7分钟前</div>
+    </div>
+    <div class="list">
+        <div class="img">
+            <img src="img/2.jpg" alt="">
+        </div>
+        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+        <div class="time">7分钟前</div>
+    </div>
+</div>
+<!--底部-->
+<footer>
+    <div class="title">
+        <div class="icon"></div>
+        <div class="text">新闻</div>
+    </div>
+    <div class="title">
+        <div class="icon"></div>
+        <div class="text">视频</div>
+    </div>
+    <div class="title">
+        <div class="icon"></div>
+        <div class="text">发现</div>
+    </div>
+    <div class="title">
+        <div class="icon"></div>
+        <div class="text">我</div>
+    </div>
+</footer>
+</body>
+<script>
+    function resize(originSize,type){
+        var type=type||"x";
+        var width=document.documentElement.clientWidth;
+        var height=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=width/originSize*100;
+        }else if(type=="y"){
+            var scale=height/originSize*100;
+        }
+
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+    }
+    window.onload=function(){
+        resize(750);
+    }
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    })
+</script>
+</html>
