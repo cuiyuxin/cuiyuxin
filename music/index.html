@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+    <link rel="stylesheet" href="css/index1.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper-3.4.0.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>主页</title>
+</head>
+<body>
+    <header>
+        <div class="h-left"></div>
+        <div class="h-right"></div>
+    </header>
+    <div class="main-title">
+        <span>推荐</span><span>排行</span><span>歌单</span><span>我的</span>
+    </div>
+    <div class="main"></div>
+    <p>新歌速递</p>
+    <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img">
+                        <a href="liebiao.html"><img src="img/list1.png" alt=""></a>
+                        <a href="liebiao.html"><img src="img/list2.png" alt=""></a>
+                        <a href="liebiao.html"><img src="img/list3.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img">
+                        <a href="liebiao.html"><img src="img/list4.png" alt=""></a>
+                        <a href="liebiao.html"><img src="img/list5.png" alt=""></a>
+                        <a href="liebiao.html"><img src="img/list6.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img">
+                        <img src="img/list7.png" alt="">
+                        <img src="img/list8.png" alt="">
+                        <img src="img/list9.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="clear"></div>
+    <p>电台</p>
+    <div class="swiper-container">
+<div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="img">
+            <img src="img/list1.png" alt="">
+            <img src="img/list2.png" alt="">
+            <img src="img/list3.png" alt="">
+            <img src="img/list1.png" alt="">
+            <img src="img/list2.png" alt="">
+            <img src="img/list3.png" alt="">
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="img">
+            <img src="img/list4.png" alt="">
+            <img src="img/list5.png" alt="">
+            <img src="img/list6.png" alt="">
+            <img src="img/list4.png" alt="">
+            <img src="img/list5.png" alt="">
+            <img src="img/list6.png" alt="">
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="img">
+            <img src="img/list7.png" alt="">
+            <img src="img/list8.png" alt="">
+            <img src="img/list9.png" alt="">
+            <img src="img/list7.png" alt="">
+            <img src="img/list8.png" alt="">
+            <img src="img/list9.png" alt="">
+        </div>
+    </div>
+</div>
+</div>
+    <div class="clear"></div>
+    <p>热门推荐</p>
+    <div class="swiper-container">
+<div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="img">
+            <img src="img/list1.png" alt="">
+            <img src="img/list2.png" alt="">
+            <img src="img/list3.png" alt="">
+            <img src="img/list1.png" alt="">
+            <img src="img/list2.png" alt="">
+            <img src="img/list3.png" alt="">
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="img">
+            <img src="img/list4.png" alt="">
+            <img src="img/list5.png" alt="">
+            <img src="img/list6.png" alt="">
+            <img src="img/list4.png" alt="">
+            <img src="img/list5.png" alt="">
+            <img src="img/list6.png" alt="">
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="img">
+            <img src="img/list7.png" alt="">
+            <img src="img/list8.png" alt="">
+            <img src="img/list9.png" alt="">
+            <img src="img/list7.png" alt="">
+            <img src="img/list8.png" alt="">
+            <img src="img/list9.png" alt="">
+        </div>
+    </div>
+</div>
+</div>
+    <div class="main"></div>
+    <footer>
+        <div class="f-top"></div>
+        <div class="f-bottom">
+            <div class="f-left">
+                <img src="img/logo.png" alt="">
+                <div class="mess">
+                    <p style="color:#D4303B;">1:36</p>
+                    <p>Lana Del Ray</p>
+                    <p>Gods and Monsters</p>
+                </div>
+            </div>
+            <div class="f-right">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    })
+</script>
+</html>

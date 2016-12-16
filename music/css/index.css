@@ -1,0 +1,71 @@
+body,html,ul,li,h1,h2,h3,h4,h5,h6,p{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+.swiper-container{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.swiper-slide{
+    background:url(../img/beijing.png) no-repeat;
+    background-size:cover;
+}
+/*第一屏*/
+.bg11{
+    position: absolute;
+    left:2.74rem;top:4.81rem;
+}
+.bg12{
+    position: absolute;
+    left:2.25rem;top:5.3rem;
+}
+.bg13{
+    position: absolute;
+    left:2.16rem;top:6.89rem;
+}
+.bg14{
+    position: absolute;
+    left:2.4rem;bottom:3.5rem;
+}
+h5{
+    font-size:30px;
+    position: absolute;
+    left:3.26rem;bottom:4.78rem;
+}
+h6{
+    font-size:20px;
+    position: absolute;
+    left:2.56rem;bottom:4.26rem;
+}
+/*第二屏*/
+.bg21{
+    position: absolute;
+    left:3.27rem;top:4.35rem;
+}
+.bg22{
+    position: absolute;
+    left:4.21rem;top:5.49rem;
+}
+.bg23{
+    position: absolute;
+    left:2.04rem;top:5.66rem;
+}
+.bg24{
+    position: absolute;
+    left:4.85rem;bottom:5.49rem;
+}
+.bg25{
+    position: absolute;
+    left:2.4rem;bottom:3.5rem;
+}
+

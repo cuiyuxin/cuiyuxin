@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+    <link rel="stylesheet" href="css/index1.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/swiper-3.4.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>播放页面</title>
+    <style>
+        .play{
+            width:7.5rem;
+            height:11.4rem;
+            position:absolute;top:1rem;
+            position: relative;
+            text-align:center;
+            background:url(img/play.png) no-repeat;
+            background-size:cover;
+        }
+        .play h3{
+            font-size:60px;
+            position: absolute;top:0.5rem;
+            left:0;right:0;margin:auto;
+        }
+        .play h4{
+            font-size:50px;
+            position: absolute;top:1.5rem;
+            left:0;right:0;margin:auto;
+        }
+        .circle{
+            position: absolute;
+            left:0;right:0;bottom:0;top:0;
+            margin:auto;
+        }
+        .cir{
+            position: absolute;
+            left:0;right:0;bottom:0;top:0;
+            margin:auto;
+        }
+        .center{
+            position: absolute;
+            left:0;right:0;bottom:0;top:0;
+            margin:auto;
+        }
+        @keyframes circle{
+            0%{
+                transform:rotate(0deg);
+            }
+            50%{
+                transform:rotate(180deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+        .span{
+            width:7.5rem;height:1rem;
+            position:absolute;bottom:1rem;
+        }
+        span{
+            font-family:"iconfont";
+            color:#DB525A;
+            font-size:100px;
+        }
+        .download:before{
+            content:"\e6db";
+        }
+        .heart:before{
+            content:"\e6dc";
+        }
+        .share:before{
+            content:"\e6b0";
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="liebiao.html"><div class="h-left"></div></a>
+        <div class="h-right"></div>
+    </header>
+    <div class="play">
+        <h3>Gods and Monsters</h3>
+        <h4>—Lana Del Ray—</h4>
+        <a href="word.html">
+            <img src="img/quan.png" alt="" class="circle">
+            <img src="img/circle.png" alt="" class="cir">
+            <img src="img/center.png" alt="" class="center">
+        </a>
+        <div class="span">
+            <span class="download"></span>
+            <span class="heart"></span>
+            <span class="share"></span>
+        </div>
+    </div>
+    <footer>
+        <div class="f-top"></div>
+        <div class="f-bottom">
+            <div class="f-left">
+                <img src="img/logo.png" alt="">
+                <div class="mess">
+                    <p style="color:#D4303B;">1:36</p>
+                    <p>Lana Del Ray</p>
+                    <p>Gods and Monsters</p>
+                </div>
+            </div>
+            <div class="f-right">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
