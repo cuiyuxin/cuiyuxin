@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <title>登录页</title>
+    <style>
+        .login{
+            width:7.5rem;height:10rem;font-family:"微软雅黑";
+        }
+        .login-top{
+            width:6.5rem;padding:0.5rem;
+            height:0.8rem;border-bottom:1px solid #ccc;
+            background:#EDEDED;font-size:50px;
+        }
+        .login-top span:before{
+            font-family:"iconfont";
+            content:"\e6fe";color:red;
+            float: left;line-height:0.8rem;
+        }
+        .login-top p{
+            line-height:0.8rem;
+            text-align:center;
+        }
+        .log-list{
+            width:6.5rem;height:0.7rem;margin:0.5rem;
+            font-size:40px;
+        }
+        input{
+            border:none;font-size:45px;
+            margin-left:0.1rem;line-height:0.7rem;
+        }
+        .log-list:nth-child(1){
+            border-bottom:1px solid #ccc;
+        }
+        .log-list:nth-child(1) span:before{
+            font-family:"iconfont";
+            content:"\e625";
+        }
+        .log-list:nth-child(2){
+            border-bottom:1px solid #ccc;
+        }
+        .log-list:nth-child(2) span:before{
+            font-family:"iconfont";
+            content:"\e61b";
+        }
+        .log-list:last-child{
+            text-align:center;
+            background:#CECECE;color:#fff;line-height:0.8rem;
+            border-radius:5px;
+        }
+        p{
+            font-size:40px;color:#ccc;text-align:center;
+        }
+        .else{
+            width:7.5rem;height:4rem;margin:0.5rem 0;color:#fff;
+        }
+        .else-list{
+            width:2rem;margin:0 0.25rem;height:2rem;background:yellow;
+            float: left;font-size:40px;border-radius:50px;
+            text-align:center;
+        }
+        .else-list span{
+            font-family:"iconfont";  font-size:150px;
+        }
+        .else-list p{
+            color:#fff;
+        }
+        .else-list:nth-child(1) span:before{
+            content:"\e654";
+        }
+        .else-list:nth-child(2) span:before{
+            content:"\e700";
+        }
+        .else-list:nth-child(3) span:before{
+            content:"\e619";
+        }
+        .reg{
+            font-size:40px;text-align:center;
+        }
+    </style>
+</head>
+<body>
+<div class="login">
+    <div class="login-top">
+        <a href="index.html"><span></span></a>
+        <p>登录</p>
+    </div>
+    <div class="log">
+        <div class="log-list"><span></span><input type="text" placeholder="手机号或邮箱账号"></div>
+        <div class="log-list"><span></span><input type="text" placeholder="密码"></div>
+        <div class="log-list"><i style="float:right;">忘记密码?</i></div>
+        <div class="log-list">登录</div>
+    </div>
+    <p>—————其他方式登录—————</p>
+    <div class="else">
+        <div class="else-list" style="background:#43BB65;"><span></span><p>微信</p></div>
+        <div class="else-list" style="background:#53A5E6;"><span></span><p>QQ</p></div>
+        <div class="else-list" style="background:#F24848;"><span></span><p>新浪微博</p></div>
+    </div>
+    <div class="reg">
+        <span style="color:#828282;">没有账号?</span><a href="" style="text-decoration:underline;color:#000;">立即注册</a>
+    </div>
+</div>
+</body>
+</html>

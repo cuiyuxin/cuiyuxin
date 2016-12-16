@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索页</title>
+    <script src="js/index.js"></script>
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6,p,ul,li{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        a{
+            text-decoration: none;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        @font-face {
+            font-family: 'iconfont';  /* project id 182457 */
+            src: url('font/iconfont.eot');
+            src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),
+            url('font/iconfont.woff') format('woff'),
+            url('font/iconfont.ttf') format('truetype'),
+            url('font/iconfont.svg#iconfont') format('svg');
+        }
+        .search{
+            width:7.5rem;height:13.3rem;
+            background:#F7F7F7;
+        }
+        .search-top{
+            width:7.1rem;height:1rem;padding:0.2rem;
+            border-bottom:2px solid #D8D8D8;
+            font-size:35px;line-height:1rem;
+            font-family:"微软雅黑";
+        }
+        .s-main{
+            width:6.1rem;height:0.6rem;margin:0.2rem;
+            border:1px solid #ccc;border-radius:50px;
+            float: left;line-height:0.6rem;background:#fff;
+        }
+        .s-main span:before{
+            font-size:50px;margin-left:0.1rem;
+            font-family:"iconfont";
+            content:"\e67b";
+        }
+        input{
+            outline:none;font-size:50px;
+        }
+        .list{
+            width:7.1rem;padding:0.2rem;height:4rem;
+            background:#fff;font-size:50px;font-family:"微软雅黑";
+        }
+        .search-list{
+            width:7.1rem;height:1rem;
+            border-bottom:1px solid #D8D8D8;line-height:1rem;
+        }
+        .search-list span{
+            display:block;float:left;
+            width:3.3rem;height:0.8rem;margin:0.1rem 0;
+        }
+        .search-list span:nth-child(2){
+            padding-left:0.2rem;
+            border-left:1px solid #D8D8D8;
+        }
+        i{
+            display:inline-block;
+            font-style:normal;
+            color:red;font-size:20px;
+            width:0.7rem;height:0.3rem;line-height:0.3rem;text-align:center;
+            border:1px solid red;border-radius:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <div class="search-top">
+            <div class="s-main">
+                <span></span>
+                <input type="text" placeholder="输入关键字" autofocus="autofocus" style="border:none;">
+            </div>
+            <a href="index.html"><span style="color:red;">取消</span></a>
+        </div>
+        <div class="list">
+            <div class="search-list">
+                <span style="color:#9F9F9F;">热门搜索</span>
+            </div>
+            <div class="search-list">
+                <span>朴槿惠</span><span>梁振英</span>
+            </div>
+            <div class="search-list">
+                <span>市场经济地位</span><span>地铁故事 <i>凤凰号</i></span>
+            </div>
+            <div class="search-list">
+                <span>全球深度...<i>凤凰号</i></span><span>青年力量<i>凤凰号</i></span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

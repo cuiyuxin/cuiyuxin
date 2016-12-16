@@ -9,28 +9,61 @@
     <script src="js/zepto.min.js"></script>
     <script src="js/swiper-3.4.0.min.js"></script>
     <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/iconfont.js"></script>
+    <script src="js/index.js"></script>
     <title>新闻</title>
 </head>
 <body>
-<!--头部-->
-<header>
-    <div class="left"></div>
-    <div class="center">
-        <span></span><a href="javascript:;">凤凰新闻</a>
-    </div>
-    <div class="right"></div>
-</header>
-<!--导航-->
-<nav>
-    <a href="javascript:;">头条</a>
-    <a href="javascript:;">推荐</a>
-    <a href="javascript:;">娱乐</a>
-    <a href="javascript:;">北京</a>
-    <a href="javascript:;">财经</a>
-    <a href="javascript:;">凤凰</a>
-    <a href="javascript:;">+</a>
-</nav>
-<!--轮播-->
+<!--首页-->
+<div class="shouye news">
+    <!--头部-->
+    <header>
+        <div class="left"></div>
+        <div class="center">
+            <span></span><a href="javascript:;">凤凰新闻</a>
+        </div>
+        <a href="search.html" class="right"></a>
+    </header>
+    <!--导航-->
+    <nav>
+        <a href="javascript:;">头条</a>
+        <a href="javascript:;">推荐</a>
+        <a href="javascript:;">娱乐</a>
+        <a href="javascript:;">北京</a>
+        <a href="javascript:;">财经</a>
+        <a href="javascript:;">凤凰</a>
+        <a href="javascript:;" style="color:red;font-size:50px;">+</a>
+        <div class="con">
+            <div class="con-title">
+                <span>点击进入频道</span><span style="color:#91939C;">编辑</span>
+            </div>
+            <div class="con-main">
+                <a href="javascript:;">头条</a>
+                <a href="javascript:;">热点</a>
+                <a href="javascript:;">娱乐</a>
+                <a href="javascript:;">太原</a>
+                <a href="javascript:;">财经</a>
+                <a href="javascript:;">凤凰号</a>
+                <a href="javascript:;" style="font-size:30px;">凤凰卫视</a>
+                <a href="javascript:;">社会</a>
+                <a href="javascript:;">科技</a>
+                <a href="javascript:;">美女</a>
+                <a href="javascript:;">军事</a>
+                <a href="javascript:;">体育</a>
+                <a href="javascript:;">历史</a>
+                <a href="javascript:;">汽车</a>
+                <a href="javascript:;">时尚</a>
+                <a href="javascript:;">房产</a>
+                <a href="javascript:;" style="font-size:30px;">Fun来了</a>
+                <a href="javascript:;">段子</a>
+                <a href="javascript:;">萌物</a>
+            </div>
+            <div class="con-foot">
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <!--轮播-->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -49,42 +82,412 @@
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
     </div>
-<!--主体-->
-<div class="main">
-    <div class="list">
-        <div class="img">
-            <img src="img/1.jpg" alt="">
+    <!--主体-->
+    <div class="main">
+        <a href="list.html">
+            <div class="list">
+                <div class="img">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+                <div class="time">7分钟前</div>
+            </div>
+        </a>
+        <a href="list.html">
+            <div class="list">
+                <div class="img">
+                    <img src="img/2.jpg" alt="">
+                </div>
+                <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+                <div class="time">7分钟前</div>
+            </div>
+        </a>
+        <a href="list.html">
+            <div class="list">
+                <div class="img">
+                    <img src="img/3.png" alt="">
+                </div>
+                <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+                <div class="time">7分钟前</div>
+            </div>
+        </a>
+        <div class="list">
+            <div class="img">
+                <img src="img/1.jpg" alt="">
+            </div>
+            <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+            <div class="time">7分钟前</div>
         </div>
-        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
-        <div class="time">7分钟前</div>
+        <div class="list">
+            <div class="img">
+                <img src="img/2.jpg" alt="">
+            </div>
+            <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
+            <div class="time">7分钟前</div>
+        </div>
     </div>
-    <div class="list">
-        <div class="img">
-            <img src="img/2.jpg" alt="">
+</div>
+<!--视频页-->
+<div class="shipin news">
+    <div class="s-header">
+        <div class="s-nav">
+            <a href="javascript:;">精选</a>
+            <a href="javascript:;">娱乐</a>
+            <a href="javascript:;">美食</a>
+            <a href="javascript:;">历史</a>
+            <a href="javascript:;">军事</a>
+            <a href="javascript:;">综艺</a>
+            <a href="javascript:;">体育</a>
+            <a href="javascript:;">生活</a>
+            <a href="javascript:;">纪录片</a>
+            <a href="javascript:;">社会</a>
         </div>
-        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
-        <div class="time">7分钟前</div>
     </div>
-    <div class="list">
-        <div class="img">
-            <img src="img/3.png" alt="">
+    <div class="video">
+        <div class="video-list">
+            <img src="img/video1.png" alt="">
         </div>
-        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
-        <div class="time">7分钟前</div>
+        <div class="video-mess">
+            <div class="video-left">
+                <span></span><span>3.7万</span>
+            </div>
+            <div class="video-right">
+                <div class="pl"></div>
+                <div class="sc"></div>
+                <div class="fx"></div>
+            </div>
+        </div>
+        <div class="video-list">
+            <img src="img/video2.png" alt="">
+        </div>
+        <div class="video-mess">
+            <div class="video-left">
+                <span></span><span>3324</span>
+            </div>
+            <div class="video-right">
+                <div class="pl"></div>
+                <div class="sc"></div>
+                <div class="fx"></div>
+            </div>
+        </div>
+        <div class="video-list">
+            <img src="img/video3.png" alt="">
+        </div>
+        <div class="video-mess">
+            <div class="video-left">
+                <span></span><span>122</span>
+            </div>
+            <div class="video-right">
+                <div class="pl"></div>
+                <div class="sc"></div>
+                <div class="fx"></div>
+            </div>
+        </div>
+        <div class="video-list">
+            <img src="img/video4.png" alt="">
+        </div>
+
     </div>
-    <div class="list">
-        <div class="img">
-            <img src="img/1.jpg" alt="">
-        </div>
-        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
-        <div class="time">7分钟前</div>
+</div>
+<!--发现页-->
+<div class="faxian news">
+    <div class="f-header">
+        <div class="f-left">猜你喜欢</div>
+        <div class="f-left">我的订阅</div>
     </div>
-    <div class="list">
-        <div class="img">
-            <img src="img/2.jpg" alt="">
+    <div class="f-con">
+        <!--猜你喜欢-->
+        <div class="find">
+            <div class="f-con-list">
+                <div class="f-list-left">
+                    <img src="img/like1.png" alt="">
+                </div>
+                <div class="f-list-right">
+                    <p>刘诗诗发际线后移?网友:看的自己的头皮发紧</p>
+                    <div class="f-r-box">
+                        <span>刘诗诗</span> <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="f-con-list">
+                <div class="f-list-left">
+                    <img src="img/like2.png" alt="">
+                </div>
+                <div class="f-list-right">
+                    <p>胡歌刘雯上演纽约寻爱记甜蜜依偎浪漫爆表</p>
+                    <div class="f-r-box">
+                        <span>刘雯</span> <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="f-con-con">
+                <p>太凄凉!日本球赛没人看 做假人充数</p>
+                <img src="img/lik3.png" alt="">
+            </div>
+            <div class="clear"></div>
+            <div class="f-con-list">
+                <div class="f-list-left">
+                    <img src="img/like1.png" alt="">
+                </div>
+                <div class="f-list-right">
+                    <p>刘诗诗发际线后移?网友:看的自己的头皮发紧</p>
+                    <div class="f-r-box">
+                        <span>刘诗诗</span> <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="f-con-list">
+                <div class="f-list-left">
+                    <img src="img/like2.png" alt="">
+                </div>
+                <div class="f-list-right">
+                    <p>胡歌刘雯上演纽约寻爱记甜蜜依偎浪漫爆表</p>
+                    <div class="f-r-box">
+                        <span>刘雯</span> <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="f-con-con">
+                <p>太凄凉!日本球赛没人看 做假人充数</p>
+                <img src="img/lik3.png" alt="">
+            </div>
         </div>
-        <div class="tit">3年30次会:习近平的全面深改"加速度"</div>
-        <div class="time">7分钟前</div>
+        <!--我的订阅-->
+        <div class="find">
+            <div class="f-top">
+                <div class="f-center">
+                    <p>+编辑订阅</p>
+                </div>
+                <div class="f-foot">
+                    <a href="login.html">
+                        <p>立即登录</p>
+                        <span>登录账号,同步您的订阅账号</span>
+                    </a>
+                </div>
+                <div class="tuijian">
+                    <p>为您推荐</p>
+                </div>
+            </div>
+            <div class="dy">
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy1.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>趣新闻</p>
+                        <p>全球趣新闻,好看好分享</p>
+                        <p>2.4万订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy2.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>东西</p>
+                        <p>汇聚眼界,拼凑世界</p>
+                        <p>7134订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy3.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>阳台设计精选</p>
+                        <p>装修设计案例,装修知识</p>
+                        <p>8645订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy4.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>新设计</p>
+                        <p>创新,设计,技术,文化</p>
+                        <p>1.7万订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy5.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>苏宁金融研究院</p>
+                        <p>专注研究宏观经济,互联网</p>
+                        <p>1435订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy1.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>趣新闻</p>
+                        <p>全球趣新闻,好看好分享</p>
+                        <p>2.4万订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy2.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>东西</p>
+                        <p>汇聚眼界,拼凑世界</p>
+                        <p>7134订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy3.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>阳台设计精选</p>
+                        <p>装修设计案例,装修知识</p>
+                        <p>8645订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+                <div class="dy-list">
+                    <div class="dy-l">
+                        <img src="img/dy4.png" alt="">
+                    </div>
+                    <div class="dy-c">
+                        <p>新设计</p>
+                        <p>创新,设计,技术,文化</p>
+                        <p>1.7万订阅</p>
+                    </div>
+                    <div class="dy-r">订阅</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--我的页-->
+<div class="my news">
+    <div class="mytop">
+        <div class="my-header">
+            <a href="login.html">
+                <div class="my-center">
+                    <div class="span"><span></span></div>
+                    <div class="p">
+                        <p>立即登录</p>
+                        <p>赚金币兑大礼</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        <div class="my-mess">
+            <div class="my-me"><span></span><p>历史</p></div>
+            <div class="my-me"><span></span><p>评论</p></div>
+            <div class="my-me"><span></span><p>消息</p></div>
+            <div class="my-me"><span></span><p>收藏</p></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="myfoot">
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">商城 <span>双十二 限时领红包</span></div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">理财 <span>马上领取新人现金红包</span></div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">活动</div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">公益</div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">订阅</div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">夜间</div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">设置</div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">离线</div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list">
+            <div class="my-left"><span></span></div>
+            <div class="my-con">反馈</div>
+            <div class="my-right"><span>&gt</span></div>
+        </div>
+        <div class="my-list"></div>
+    </div>
+</div>
+<div class="fx-main">
+    <div class="fx-center">
+        <div class="center-list">
+            <span></span>
+            <p>QQ好友</p>
+        </div>
+        <div class="center-list">
+            <span></span>
+            <p>QQ空间</p>
+        </div>
+        <div class="center-list">
+            <span></span>
+            <p>微信朋友圈</p>
+        </div>
+        <div class="center-list">
+            <span></span>
+            <p>微信好友</p>
+        </div>
+        <div class="center-list">
+            <span></span>
+            <p>新浪微博</p>
+        </div>
+        <div class="center-list">
+            <span></span>
+            <p>支付宝好友</p>
+        </div>
+        <div class="center-list">
+            <span></span>
+            <p>生活圈</p>
+        </div>
+        <div class="center-list">
+            <span></span>
+            <p>复制链接</p>
+        </div>
+        <div class="center-list">
+            <span></span>
+            <p>更多</p>
+        </div>
+        <div class="fx-bottom">取消</div>
     </div>
 </div>
 <!--底部-->
@@ -108,21 +511,6 @@
 </footer>
 </body>
 <script>
-    function resize(originSize,type){
-        var type=type||"x";
-        var width=document.documentElement.clientWidth;
-        var height=document.documentElement.clientHeight;
-        if(type=="x"){
-            var scale=width/originSize*100;
-        }else if(type=="y"){
-            var scale=height/originSize*100;
-        }
-
-        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
-    }
-    window.onload=function(){
-        resize(750);
-    }
     var mySwiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
