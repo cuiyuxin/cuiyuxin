@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1481638085219'); /* IE9*/
-  src: url('iconfont.eot?t=1481638085219#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1481638085219') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1481638085219') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1481638085219#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1482043507137'); /* IE9*/
+  src: url('iconfont.eot?t=1482043507137#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1482043507137') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1482043507137') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1482043507137#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -337,6 +337,8 @@
 
 .icon-xingbie:before { content: "\e7f8"; }
 
+.icon-yinleguan-copy:before { content: "\e714"; }
+
 .icon-qqkongjian3:before { content: "\e766"; }
 
 .icon-neiyeweixinpengyouquan01:before { content: "\e65b"; }
@@ -403,6 +405,8 @@
 
 .icon-caidan4:before { content: "\e6cd"; }
 
+.icon-yinle6:before { content: "\e715"; }
+
 .icon-zanting2:before { content: "\e6ce"; }
 
 .icon-lixian:before { content: "\e696"; }
@@ -423,6 +427,8 @@
 
 .icon-shengyin5:before { content: "\e6d3"; }
 
+.icon-iconmusicm:before { content: "\e716"; }
+
 .icon-kaishi2:before { content: "\e7c3"; }
 
 .icon-yinle2:before { content: "\e6d4"; }
@@ -442,6 +448,8 @@
 .icon-zanting3:before { content: "\e6d7"; }
 
 .icon-24xiaoshi:before { content: "\e634"; }
+
+.icon-yinlemusic215:before { content: "\e717"; }
 
 .icon-qqhaoyou:before { content: "\e962"; }
 
@@ -499,6 +507,8 @@
 
 .icon-zhifubaoshenghuoquan1:before { content: "\e66c"; }
 
+.icon-yinle31:before { content: "\e858"; }
+
 .icon-houtui1:before { content: "\e6e8"; }
 
 .icon-suiji2:before { content: "\e6e9"; }
@@ -522,6 +532,8 @@
 .icon-caidan6:before { content: "\e6ed"; }
 
 .icon-caidan7:before { content: "\e6f0"; }
+
+.icon-iconbendiyinle:before { content: "\e718"; }
 
 .icon-caidan8:before { content: "\e6f3"; }
 
