@@ -3,6 +3,7 @@ body{
     color:#000;
     font-size:17px;
     font-weight:300;
+    .clear;
 }
 .adcenter {
     width: 960px;
@@ -14,20 +15,16 @@ body{
     width:685px;
     float: left;
     height:80px;
-    position: fixed;
-    left:0;right:0; top:20px;
+    position: absolute;
+    left:0;right:0;top:0;
     margin:auto;
 }
 .nav>li{
     width:160px;
-    margin-left:15px;
     height:100%;
     float: left;
     text-align: center;
     background:rgba(255,255,255,.4);
-}
-.nav>li:nth-child(1){
-    margin:0;
 }
 .nav>li>a{
     color:#000;
@@ -85,6 +82,13 @@ nav{
     color:#5394D6;
 }
 @media screen and (min-width:768px){
+    .slider>.container>.row{
+        width:70%;
+    }
+    .slider>.container>.row>li{
+        width:23%;
+        margin:1%;
+    }
     nav{
         display:block;
     }
@@ -93,6 +97,13 @@ nav{
     }
 }
 @media screen and (min-width:1170px){
+    .slider>.container>.row{
+        width:70%;
+    }
+    .slider>.container>.row>li{
+        width:23%;
+        margin:1%;
+    }
     nav{
         display:block;
     }
@@ -103,17 +114,27 @@ nav{
 .screen>li{
     display:block;
     width:100%;
-    height:1200px;
+    height:1000px;
     z-index:999;
 }
 /*第一页*/
 .screen>li:nth-child(1){
     background:url("../img/bg-01.jpg") no-repeat center;
 }
-.first{
+.screen>li:nth-child(1)>.row{
+    width:50%;
     position: absolute;
-    top:200px;
+    top:150px;
+    left:0;
+    right:0;
+    margin:auto;
+    text-align:center;
+    line-height:30px;
 }
+.screen>li:nth-child(1)>.row>h2{
+    font-size:20px;
+}
+
 .first-title{
     display:block;
     width:68px;
@@ -129,254 +150,174 @@ nav{
     margin-bottom:30px;
 }
 .first-info{
-    width:400px;
     padding:40px 45px;
     margin:0 auto;
     background:rgba(255,255,255,.6);
 }
 @media screen and (min-width:768px){
-   .first{
-       width:600px;
-   }
+    .screen>li:nth-child(1)>.row{
+        width:40%;
+    }
 }
 @media screen and (min-width:1170px){
-    .first{
-        width:600px;
+    .screen>li:nth-child(1)>.row{
+        width:50%;
     }
 }
 /*第二页*/
 .screen>li:nth-child(2){
     background:url("../img/bg-02.jpg") no-repeat center;
-    display:none;
 }
-.two:nth-child(2){
-    margin:0;
-}
-.second{
-    width:300px;
+.screen>li:nth-child(2)>.row{
+    width:40%;
     position: absolute;
-    left:0; right:0;
-    top:180px;
+    top:150px;
+    left:0;
+    right:0;
     margin:auto;
 }
-.two{
-    width:300px;
-    height:250px;
+.screen>li:nth-child(2)>.row>div{
+    height:396px;
     padding:20px 45px;
     background:rgba(255,255,255,.6);
     margin-bottom:20px;
 }
 @media screen and (min-width:768px){
-    .second{
-        width:740px;
-        top:200px;
+    .screen>li:nth-child(2)>.row{
+        width:60%;
     }
-    .two{
-        width:360px;
-        height:396px;
-        margin-right:20px;
-        float: left;
+    .screen>li:nth-child(2)>.row>div{
+        width:48%;
+        margin:1%;
     }
 }
 @media screen and (min-width:1170px){
-    .second{
-        width:860px;
-        top:200px;
+    .screen>li:nth-child(2)>.row{
+        width:80%;
     }
-    .two{
-        width:420px;
-        height:396px;
-        margin-right:20px;
-        float: left;
+    .screen>li:nth-child(2)>.row>div{
+        width:48%;
+        margin:1%;
     }
 }
 /*第三页*/
 .screen>li:nth-child(3){
     background:url("../img/bg-03.jpg") no-repeat center;
-    display:none;
 }
-.third{
-    width:280px;
+.screen>li:nth-child(3)>.row{
+    width:40%;
     position: absolute;
-    left:0; right:0;
-    top:50px;
+    top:150px;
+    left:0;
+    right:0;
     margin:auto;
 }
-.third>div{
-    width:280px;
-    height:180px;
-    margin:5px;
+.screen>li:nth-child(3)>.row>div{
+    width:98%;
+    height:200px;
+    margin:1%;
     border:10px solid #fff;
     background:url("../img/tm-img-03.jpg") no-repeat;
     background-size:cover;
     float: left;
+    position: relative;
+    transition:all 0.5s;
+}
+.screen>li:nth-child(3)>.row>div>span{
+    display:block;
+    width:100%;
+    height:20px;
+    background:rgba(255,255,255,.6);
+    font-size:15px;
+    text-align:center;
+    position:absolute;
+    bottom:0;
+}
+.screen>li:nth-child(3)>.row>div:hover{
+    transform:scale(1.2,1.2);
+    z-index:999;
+}
+.screen>li:nth-child(3)>.row>div:hover span{
+    opacity:0;
 }
 @media screen and (min-width:768px){
-    .third{
-        width:640px;
-        top:200px;
+    .screen>li:nth-child(3)>.row{
+        width:60%;
     }
-    .third>div{
-        width:280px;
-        height:200px;
-        margin:20px;
-        float: left;
+    .screen>li:nth-child(3)>.row>div{
+        width:48%;
+        margin:1%;
     }
 }
 @media screen and (min-width:1170px){
-    .third{
-        width:900px;
-        top:200px;
+    .screen>li:nth-child(3)>.row{
+        width:80%;
     }
-    .third>div{
-        width:280px;
-        height:200px;
-        margin:10px;
-        float: left;
+    .screen>li:nth-child(3)>.row>div{
+        width:31%;
+        margin:1%;
     }
 }
 /*第四页*/
 .screen>li:nth-child(4){
     background:url("../img/bg-04.jpg") no-repeat center;
-    display:none;
 }
-.forth{
-    width:300px;
+.screen>li:nth-child(4)>.row{
+    width:80%;
     position: absolute;
-    left:0; right:0;
+    left:0;
+    right:0;
     top:150px;
     margin:auto;
 }
-.forth p{
-    text-align: center;
-    line-height:50px;
+.screen>li:nth-child(4)>.row p{
+    text-align:center;
     color:#fff;
-    font-weight:800;
     font-size:30px;
-    margin-bottom:20px;
+    line-height:40px;
+    padding:10px 0;
 }
-.form{
-    width:100%;
-}
-.forth-info{
-    margin-right:20px;
-}
-.forth-mess textarea{
-    display:block;
-    font-size:20px;
-    width:300px;
-    height:150px;
-}
-.f-item input{
-    display:block;
-    font-size:20px;
-    width:300px;
-    height:50px;
-    margin-bottom:10px;
-}
-.submit{
+.screen>li:nth-child(4)>.row .submit{
     width:100px;
     height:50px;
-    text-align: center;
-    line-height:50px;
-    color:#fff;
     background:#000;
+    color:#fff;
+    text-align:center;
+    line-height:50px;
     float:right;
-    margin:10px 0 0 0;
+}
+.screen>li:nth-child(4)>.row  input{
+    border:0px;
+    margin:1%;
+    width:98%;
+    height:50px;
+    font-size:20px;
+    background:rgba(255,255,255,.7);
+}
+.screen>li:nth-child(4)>.row textarea{
+    margin:1%;
+    width:98%;
+    height:160px;
+    font-size:20px;
+    background:rgba(255,255,255,.7);
 }
 @media screen and (min-width:768px){
-    .forth{
-        width:600px;
-        position: absolute;
-        left:0; right:0;
-        top:150px;
-        margin:auto;
+    .screen>li:nth-child(4)>.row  input{
+        width:80%;
+        float: right;
     }
-    .forth p{
-        text-align: center;
-        line-height:50px;
-        color:#fff;
-        font-weight:800;
-        font-size:40px;
-        margin-bottom:20px;
-    }
-    .form{
-        width:100%;
-    }
-    .forth-info{
-        margin-right:20px;
+    .screen>li:nth-child(4)>.row textarea{
+        width:90%;
         float: left;
-    }
-    .forth-mess textarea{
-        display:block;
-        font-size:20px;
-        width:280px;
-        height:150px;
-        float: left;
-    }
-    .f-item input{
-        display:block;
-        font-size:20px;
-        width:300px;
-        height:50px;
-        margin-bottom:10px;
-    }
-    .submit{
-        width:100px;
-        height:50px;
-        text-align: center;
-        line-height:50px;
-        color:#fff;
-        background:#000;
-        float:right;
-        margin:10px 10px 0 0;
     }
 }
 @media screen and (min-width:1170px){
-    .forth{
-        width:900px;
-        position: absolute;
-        left:0; right:0;
-        top:150px;
-        margin:auto;
+    .screen>li:nth-child(4)>.row  input{
+        width:70%;
+        float: right;
     }
-    .forth p{
-        text-align: center;
-        line-height:50px;
-        color:#fff;
-        font-weight:800;
-        font-size:50px;
-        margin-bottom:20px;
-    }
-    .form{
-        width:100%;
-    }
-    .forth-info{
-        margin-right:20px;
+    .screen>li:nth-child(4)>.row textarea{
+        width:80%;
         float: left;
-    }
-    .forth-mess textarea{
-        display:block;
-        font-size:20px;
-        width:400px;
-        height:150px;
-        float: left;
-    }
-    .f-item input{
-        display:block;
-        font-size:20px;
-        width:400px;
-        height:50px;
-        margin-bottom:10px;
-    }
-    .submit{
-        width:100px;
-        height:50px;
-        text-align: center;
-        line-height:50px;
-        color:#fff;
-        background:#000;
-        float:right;
-        margin:10px 80px 0 0;
     }
 }
