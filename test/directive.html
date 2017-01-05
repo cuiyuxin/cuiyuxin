@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>指令</title>
+    <script src="../public/javascripts/angular/angular.min.js"></script>
+    <script src="directive.js"></script>
+</head>
+<script>
+
+</script>
+<body ng-app="myapp">
+
+<div style="width:100px;height:100px;border:1px solid #000;"></div>
+<button type="button">按钮</button>
+
+
+
+<!--<div menu></div>-->
+</body>
+<!--restrict:"ECMA", E元素 C类名 M注释 A属性-->
+<script>
+    //angaular路由原理
+    window.onpopstate=function(){
+
+    }
+    var url=location.href;
+    if(url.indexOf("#")>-1){
+       var ajaxurl=url.slice(url.indexOf("#")+1);
+       var xmlobj=new XMLHttpRequest();
+       xmlobj.onload=function(){
+           document.querySelector("div").innerHTML=xmlobj.response;
+       }
+       xmlobj.open("get",ajaxurl);
+       xmlobj.send();
+    }else{
+        document.querySelector("div").innerHTML="";
+    }
+
+    document.querySelector("button").onclick=function(){
+        var newurl=url+"#demoq.html";
+        location.href=newurl;
+        var xmlobj=new XMLHttpRequest();
+        xmlobj.onload=function(){
+            document.querySelector("div").innerHTML=xmlobj.responseText;
+        }
+        xmlobj.open("get","demo1.html");
+        xmlobj.send();
+    }
+
+    //ajax 1.向服务器发起请求 2.不能跨域
+    //在地址栏里留不下任何记录 搜索引擎不友好
+    angular.module("myapp",["directives"])
+</script>
+</html>

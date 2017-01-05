@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-app="myapp">
+    <div ng-controller="ctrl"></div>
+</body>
+<script>
+    angular.module("myapp",[]).factory("ABC",function(){
+        return {name:"zhangsan"};
+    }).controller("ctrl",function(ABC){
+        console.log(ABC);
+    }).filter("abc",function(){
+        console.log("abc");
+    }).config(function($http){
+        console.log(2);
+    })
+</script>
+</html>
