@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生命周期2</title>
+
+    <script src="node_modules/babel-standalone/babel.js"></script>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+</head>
+<body>
+<div id="aa"></div>
+<script type="text/babel">
+    class Life extends React.Component{
+        constructor(){
+            super();
+            this.state={time:0};
+            console.log("构造函数")
+        }
+        //组件即将更新
+        componentWillUpdate(){
+            console.log("组件即将更新");
+        }
+        fn(){
+            this.setState({time:1});
+        }
+        render(){
+            console.log("组件正在装配到页面当中");
+            return <div onClick={this.fn.bind(this)}>{this.state.time}</div>
+        }
+        //组件已经更新
+        componentDidUpdate(){
+            console.log("更新完了")
+        }
+    }
+    ReactDOM.render(<Life/>,document.getElementById("aa"));
+</script>
+</body>
+</htm

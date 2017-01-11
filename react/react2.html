@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件的嵌套</title>
+
+    <script src="node_modules/babel-standalone/babel.js"></script>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+</head>
+<body>
+<div id="aa"></div>
+<script type="text/babel">
+    class Parent extends React.Component{
+        constructor(){
+            super();
+        }
+        render(){
+            return (
+                    <ul>
+                            <Son></Son>
+                            <Son1></Son1>
+                            <Son2></Son2>
+                     </ul>
+            )
+        }
+    }
+    class Son extends React.Component{
+        constructor(){
+            super();
+        }
+        render(){
+            return (
+                    <li>1111</li>
+            )
+        }
+    }
+    class Son1 extends React.Component{
+        constructor(){
+            super();
+        }
+        render(){
+            return (
+                    <li>2222</li>
+            )
+        }
+    }
+    class Son2 extends React.Component{
+        constructor(){
+            super();
+        }
+        render(){
+            return (
+                    <li>3333</li>
+        )
+        }
+    }
+    ReactDOM.render(<Parent/>,document.getElementById("aa"));
+</script>
+</body>
+</html>
