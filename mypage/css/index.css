@@ -276,16 +276,7 @@ nav{
     font-size:30px;
     line-height:40px;
     padding:10px 0;
-}
-.screen>li:nth-child(4)>.row .submit{
-    width:100px;
-    height:50px;
-    background:#000;
-    color:#fff;
-    text-align:center;
-    line-height:50px;
-    float:right;
-}
+} 
 .screen>li:nth-child(4)>.row  input{
     border:0px;
     margin:1%;
@@ -293,31 +284,17 @@ nav{
     height:50px;
     font-size:20px;
     background:rgba(255,255,255,.7);
-}
-.screen>li:nth-child(4)>.row textarea{
-    margin:1%;
-    width:98%;
-    height:160px;
-    font-size:20px;
-    background:rgba(255,255,255,.7);
+    text-align: center;
 }
 @media screen and (min-width:768px){
     .screen>li:nth-child(4)>.row  input{
         width:80%;
-        float: right;
-    }
-    .screen>li:nth-child(4)>.row textarea{
-        width:90%;
-        float: left;
+        margin:1% 10%;
     }
 }
 @media screen and (min-width:1170px){
     .screen>li:nth-child(4)>.row  input{
         width:70%;
-        float: right;
-    }
-    .screen>li:nth-child(4)>.row textarea{
-        width:80%;
-        float: left;
+        margin:1% 15%;
     }
 }
